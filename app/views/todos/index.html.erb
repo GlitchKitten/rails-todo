@@ -16,11 +16,5 @@
 <% end %>
 
 <ul>
-  <% @todos.each do |todo| %>
-  <li>
-    <%= todo.description %><br>
-    <strong>priority: </strong><%= todo.priority %><br>
-    <%= link_to "done", todo_path(todo), method: 'delete' %>
-  </li>
-<% end %>
+  <%= render @todos %>
 </ul>
