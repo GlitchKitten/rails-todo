@@ -1,6 +1,6 @@
 <h1>My Todos</h1>
 
-<%= form_for Todo.new do |f| %>
+<%= form_for Todo.new, remote: true do |f| %>
   <div class="form-group">
     <%= f.text_field :description, placeholder:
     "what needs doing?" %>
