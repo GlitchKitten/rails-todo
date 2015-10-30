@@ -14,9 +14,10 @@
 ActiveRecord::Schema.define(version: 20151029155417) do
 
   create_table "todos", force: :cascade do |t|
-    t.string   "todo_item"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "description"
+    t.string   "priority"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
