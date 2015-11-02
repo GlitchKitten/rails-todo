@@ -13,3 +13,56 @@
  *= require_tree .
  *= require_self
  */
+
+.container{
+  width: 80%;
+  padding-top: 50px;
+}
+
+/*Nav Bar*/
+.project a {
+  float: left;
+  text-decoration: none;
+  padding: 1em;
+}
+
+.navbar-header {
+  text-decoration: none;
+  float: right;
+  text-transform: uppercase;
+	letter-spacing: .05em;
+	font-weight: 700;
+}
+
+.navbar-header #search_bar {
+  color:grey;
+  text-transform: uppercase;
+}
+
+#search_form {
+  padding: 1em 1em .5em 1em;
+}
+
+#search_label {
+  color: white;
+}
+
+#search_button:hover{
+  color: #FF3399; 
+}
+
+#search_button {
+  transition: color 600ms;
+	-webkit-transition: color 600ms;
+	-moz-transition: color 600ms;
+	-o-transition: color 600ms;
+}
+
+/*Form Elements*/
+
+/*To Do Items*/
+
+.todo_item {
+}
+
+
