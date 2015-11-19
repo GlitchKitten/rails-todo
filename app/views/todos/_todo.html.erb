@@ -1,5 +1,8 @@
-<li id="<%= todo.id %>">
-  <%= todo.description %><br>
-  <strong>priority: </strong><%= todo.priority %><br>
-  <%= link_to "done", todo_path(todo), method: 'delete', remote: true %>
-</li>
+<ul>
+  <li id="<%= todo.id %>">
+    <div  class = "todo_item"><%= todo.description %></div>
+    <div class = "todo_priority"><strong>priority: </strong><%= todo.priority %></div>
+    <div class = "delete"><%= link_to "delete", todo_path(todo), method: 'delete', remote: true %></div>   
+    <div class = "done"><%= link_to "done", todo_path(todo), method: 'patch', remote: true %></div>
+  </li>
+</ul>  

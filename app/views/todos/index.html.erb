@@ -24,8 +24,13 @@
       <% end %>
     </div>
 
+  <% if @todos.present? %>
+    <%= render @todos %>
+  <% else %>
+    <p id = "error_message">There are no products containing the term(s) <%= params[:search] %>.</p>
     <ul>
       <%= render @todos %>
     </ul>
+   <%end%>
   </body>
 </html>

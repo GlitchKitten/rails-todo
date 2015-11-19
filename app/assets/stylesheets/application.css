@@ -62,7 +62,8 @@
 
 /*To Do Items*/
 
-.todo_item {
+li {
+  list-style-type: none;
 }
 
 

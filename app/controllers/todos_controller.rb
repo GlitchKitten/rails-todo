@@ -1,6 +1,10 @@
 class TodosController < ApplicationController
   def index
-    @todos = Todo.all
+    if params[:search]
+      @todos = Todo.search(params[:search]).order("created_at DESC")
+    else
+      @todos = Todo.all
+    end
   end
   
   def create
@@ -11,6 +15,14 @@ class TodosController < ApplicationController
       format.js {}
     end
   end
+  
+  def edit
+    @todo = Todo.find(params[:id])
+     respond_to do |format|
+      format.html {redirect_to root_path}
+      format.js {}
+    end
+  end   
   
   def destroy
     @todo = Todo.find(params[:id])
