@@ -16,12 +16,8 @@ class TodosController < ApplicationController
     end
   end
   
-  def edit
+  def update
     @todo = Todo.find(params[:id])
-     respond_to do |format|
-      format.html {redirect_to root_path}
-      format.js {}
-    end
   end   
   
   def destroy
