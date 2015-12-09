@@ -1,8 +1,12 @@
-  <li id="<%= todo.id %>">
-    <div  class = "todo_item"><%= todo.description %></div>
-    <div class = "todo_priority"><strong>priority: </strong><%= todo.priority %></div>
-    <div class = "edit"><%= link_to "edit", edit_todo_path(todo) %></div> 
-    <div class = "delete"><%= link_to "delete", todo_path(todo), method: 'delete', remote: true %></div>   
-    <div class = "done"><%= link_to "done", todo_path(todo), method: 'patch', remote: true %></div>
-  </li>
+<li id="<%= todo.id %>" class = "well well-sm todo_block">
+  <div  class = "todo_item"><%= todo.description %></div>
+  <div class = "todo_priority"><strong>Priority: </strong><%= todo.priority %></div>
+  <div class = "list_actions">
+    <p class = "edit"><%= link_to "edit", edit_todo_path(todo) %></p> 
+    <p class = "delete"><%= link_to "delete", todo_path(todo), method: 'delete', remote: true %></p>  
+    <p class = "done"><%= link_to "done", todo_path(todo), method: 'patch', remote: true %></p>
+  </div>
+</li>
+<br>
+  
  
