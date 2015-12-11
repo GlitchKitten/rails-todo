@@ -1,13 +1,14 @@
-<li id="<%= todo.id %> container" class = "well well-sm todo_block <%=todo.priority%>">
+<li id="<%= todo.id %>" class = "well well-sm todo_block <%=todo.priority%>">
   <div class = "todo_item"><%= todo.description %></div>
   <div class = "todo_priority"><strong>Priority: </strong><%= todo.priority%></div>
   <div class = "list_actions">
-    <%= link_to edit_todo_path(todo), remote: true do %>
+    <%= link_to edit_todo_path(todo), class: "button", remote: true do %>
       <span class="glyphicon glyphicon-pencil"></span>
     <% end %>
-    <%= link_to todo_path(todo), method: 'delete', remote: true do%>
-      <span class="glyphicon glyphicon-ok-circle"></span>
+    <%= link_to todo_path(todo), class: "button", method: "delete", remote: true do %>
+      <i class="glyphicon glyphicon-check"></i>
     <% end %>
+ 
   </div>
 </li>
 <br>
