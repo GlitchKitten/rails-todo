@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
 .container{
   width: 80%;
   padding-top: 50px;
@@ -77,3 +76,19 @@ li {
 }
 
 
+/*Class Selectors for Priority*/
+.High {
+  border-color: red;
+}
+
+.Medium {
+  border-color: yellow;
+}
+
+.Low {
+  border-color: green;
+}
+
+.None {
+  border-color: gray;
+}

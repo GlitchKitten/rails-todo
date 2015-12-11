@@ -9,7 +9,7 @@
 
         <div class="form-group priority">
           <%= f.radio_button :priority, 'High' %> 
-          <%= f.label :priority, 'High', value: 'High' %>
+          <%= f.label :priority, 'High', value: '1'%>
           <%= f.radio_button :priority, 'Medium' %>
           <%= f.label :priority, 'Medium', value: 'Medium' %>
           <%= f.radio_button :priority, 'Low' %>
@@ -29,7 +29,7 @@
   <% else %>
     <p id = "error_message">There are no products containing the term(s) <%= params[:search] %>.</p>
     <ul>
-      <%= render @todos %>
+      <%yield%>
     </ul>
    <%end%>
   </body>

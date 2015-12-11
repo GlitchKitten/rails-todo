@@ -30,7 +30,9 @@
               <li> 
                 <%= form_tag(todos_path, method: "get", id: "search_form") do %>
                   <%= text_field_tag :search, params[:search] %>
-                  <%= submit_tag("Search", id: "search_button") %>
+                  <button type="button" class="btn btn-default" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                  </button>
                 <% end %>
               </li> 
               </br>
@@ -41,9 +43,10 @@
     </div>  
   </nav> 
   
-<body>
-  <ul>
-<%= yield %>
-  </ul>
-</body>
+  <body>
+    <ul>
+      <%= yield %>
+    </ul>  
+  </body>
+
 </html>
