@@ -5,7 +5,9 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'tinysort.min' %>
   <%= csrf_meta_tags %>
+  
 </head>
   
   <nav>
@@ -44,9 +46,44 @@
   </nav> 
   
   <body>
+     <div class = "container list-create">
+      <h1>My Todos</h1>
+
+      <%= form_for Todo.new, remote: true do |f| %>
+        <div class="form-group priority">
+          <%= f.radio_button :priority, 'High' %> 
+          <%= f.label :priority, 'High', value: '1'%>
+          <%= f.radio_button :priority, 'Medium' %>
+          <%= f.label :priority, 'Medium', value: 'Medium' %>
+          <%= f.radio_button :priority, 'Low' %>
+          <%= f.label :priority, 'Low', value: 'Low' %>
+          <%= f.radio_button :priority, 'None', checked: 'checked' %>
+          <%= f.label :priority, 'None', value: 'None' %>
+        </div>
+      
+        <div class="form-group">
+          <%= f.text_field :description, placeholder: "what needs doing?",  class: "form-control form_area" %>
+        </div>
+
+        <div class="button">
+          <%= f.submit 'Submit' %>
+        </div>
+      <% end %>
+    </div>
+    
+    <div class = "todo_list">
+      <ul>
+        <%yield%>
+      </ul>
+    </div>  
+
+  <% if @todos.present? %>
     <ul>
-      <%= yield %>
+    <%= render @todos %>
     </ul>  
+  <% else %>
+    <p id = "error_message">There are no products containing the term(s) <%= params[:search] %>.</p>
+  <%end%>
   </body>
 
 </html>
