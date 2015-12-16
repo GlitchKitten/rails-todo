@@ -3,7 +3,7 @@ class TodosController < ApplicationController
     if params[:search]
       @todos = Todo.search(params[:search]).order("created_at DESC")
     else
-      @todos = Todo.all
+      @todos = Todo.order(:priority)
     end
   end
   
