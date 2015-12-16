@@ -77,18 +77,14 @@ li {
 
 
 /*Class Selectors for Priority*/
-.High {
+.Urgent {
   border-color: red;
 }
 
-.Medium {
+.Pending {
   border-color: yellow;
 }
 
-.Low {
+.Later {
   border-color: green;
-}
-
-.None {
-  border-color: gray;
 }

@@ -51,14 +51,12 @@
 
       <%= form_for Todo.new, remote: true do |f| %>
         <div class="form-group priority">
-          <%= f.radio_button :priority, 'High' %> 
-          <%= f.label :priority, 'High', value: '1'%>
-          <%= f.radio_button :priority, 'Medium' %>
-          <%= f.label :priority, 'Medium', value: 'Medium' %>
-          <%= f.radio_button :priority, 'Low' %>
-          <%= f.label :priority, 'Low', value: 'Low' %>
-          <%= f.radio_button :priority, 'None', checked: 'checked' %>
-          <%= f.label :priority, 'None', value: 'None' %>
+          <%= f.radio_button :priority, 'Urgent'%> 
+          <%= f.label :priority, 'Urgent', value: 'Urgent'%>
+          <%= f.radio_button :priority, 'Pending' %>
+          <%= f.label :priority, 'Pending', value: 'Pending' %>
+          <%= f.radio_button :priority, 'Later', checked: 'checked' %>
+          <%= f.label :priority, 'Later', value: 'Later' %>
         </div>
       
         <div class="form-group">
