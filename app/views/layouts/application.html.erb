@@ -28,11 +28,11 @@
             <div class = "nav navbar-nav">
               <li><%= link_to "Urgent" %></li>
               <li><%= link_to "Pending" %></li>
-              <li><%= link_to "Complete" %></li>
+              <li><%= link_to "Later" %></li>
               <li> 
                 <%= form_tag(todos_path, method: "get", id: "search_form") do %>
                   <%= text_field_tag :search, params[:search] %>
-                  <button type="button" class="btn btn-default" aria-label="Left Align">
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                   </button>
                 <% end %>
@@ -46,9 +46,11 @@
   </nav> 
   
   <body>
-     <div class = "container list-create">
+    <header>
       <h1>My Todos</h1>
-
+    </header>
+    
+    <div class = "todo_form container">
       <%= form_for Todo.new, remote: true do |f| %>
         <div class="form-group priority">
           <%= f.radio_button :priority, 'Urgent'%> 
