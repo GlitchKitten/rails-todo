@@ -13,8 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
-
 /*Nav Bar*/
 .project a {
   float: left;
@@ -65,6 +63,24 @@ header {
 .form-group  {
   width: 80%;
   display: inline;
+}
+
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"]:checked + label {
+    border: 1px solid red;
+}
+
+#urgent_label {
+  
+}
+
+#pending_label {
+}
+
+#later_label {
+  background-color: green;
 }
 /*To Do Items*/
 
