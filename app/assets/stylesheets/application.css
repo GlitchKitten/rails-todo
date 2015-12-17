@@ -62,6 +62,10 @@ header {
 
 /*Form Elements*/
 
+.form-group  {
+  width: 80%;
+  display: inline;
+}
 /*To Do Items*/
 
 li {
