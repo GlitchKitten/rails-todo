@@ -45,11 +45,7 @@
     </div>  
   </nav> 
   
-  <body>
-    <header>
-      <h1>My Todos</h1>
-    </header>
-    
+  <body>    
     <div class = "todo_form container">
       <%= form_for Todo.new, remote: true do |f| %>
         <div class="form-group priority">
@@ -62,8 +58,8 @@
         </div>
       
         <div class="form-group">
-          <%= f.text_field :description, placeholder: "what needs doing?",  class: "form-control form_area" %>
-          <%= f.submit 'Submit', class: "button" %>
+          <%= f.text_field :description, placeholder: "What needs doing?",  class: "form-control form_area input-text" %>
+          <%= f.submit 'Submit', class: "button submit-button" %>
          
         </div>  
       <% end %>

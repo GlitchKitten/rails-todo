@@ -52,17 +52,25 @@
 	-o-transition: color 600ms;
 }
 
-header {
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 100px;
-}
-
 /*Form Elements*/
 
-.form-group  {
+.container {
+  padding-top: 100px;
+  padding-bottom: 2%;  
+}
+
+.form-group {
   width: 80%;
   display: inline;
+}
+
+.input-text {
+  font-style: italic;
+}
+
+.submit-button {
+  margin: 1%;
+  margin-left: 0;
 }
 
 input[type="radio"] {
@@ -92,17 +100,36 @@ li {
   display: inline;
 }
 
+.todo_item {
+  float: left;
+  text-align: left;
+  padding-left: 1%;
+  margin: 0;
+}
+
 /*Class Selectors for Priority*/
 .Urgent {
   border-color: red;
+}
+
+.Urgent .glyphicon-unchecked {
+  color: red;
 }
 
 .Pending {
   border-color: yellow;
 }
 
+.Pending .glyphicon-unchecked {
+  color: yellow;
+}
+
 .Later {
   border-color: green;
+}
+
+.Later .glyphicon-unchecked {
+  color: green;
 }
 
 #error_message {
