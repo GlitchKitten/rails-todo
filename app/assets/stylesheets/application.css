@@ -60,12 +60,12 @@
 }
 
 .form-group {
-  width: 80%;
   display: inline;
 }
 
 .input-text {
   font-style: italic;
+  margin-top: 1%;
 }
 
 .submit-button {
@@ -73,22 +73,45 @@
   margin-left: 0;
 }
 
-input[type="radio"] {
-    display: none;
+.todo_block {
+  border-top: solid 2px #F1376F;
+  border-bottom: solid 2px #F1376F;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2%;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
 input[type="radio"]:checked + label {
-    border: 1px solid red;
+  border: 1px solid black;
+  padding: 1%;
+  margin: 2px;
 }
 
 #urgent_label {
-  
+  background-color: #F1376F;
+  padding: 7px;
+  border-radius: 5%;
 }
 
 #pending_label {
+  background-color: #FFC958;
+  padding: 7px;
+  border-radius: 5%;
 }
 
 #later_label {
-  background-color: green;
+  background-color: #30D1AD;
+  padding: 7px;
+  border-radius: 5%;
 }
 /*To Do Items*/
 
@@ -103,33 +126,31 @@ li {
 .todo_item {
   float: left;
   text-align: left;
-  padding-left: 1%;
-  margin: 0;
 }
 
 /*Class Selectors for Priority*/
 .Urgent {
-  border-color: red;
+  border-color: #F1376F;
 }
 
 .Urgent .glyphicon-unchecked {
-  color: red;
+  color: #F1376F;
 }
 
 .Pending {
-  border-color: yellow;
+  border-color: #FFC958;
 }
 
 .Pending .glyphicon-unchecked {
-  color: yellow;
+  color: #FFC958;
 }
 
 .Later {
-  border-color: green;
+  border-color: #30D1AD;
 }
 
 .Later .glyphicon-unchecked {
-  color: green;
+  color: #30D1AD;
 }
 
 #error_message {
