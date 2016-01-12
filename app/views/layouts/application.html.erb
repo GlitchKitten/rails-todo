@@ -7,10 +7,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'tinysort.min' %>
   <%= csrf_meta_tags %>
-  
 </head>
   
-  <nav>
+<nav>
     <div class = "navbar navbar-header navbar-inverse navbar-fixed-top" role = "navigation">
       <div class = "container-fluid">
         <div class = "project">
@@ -43,9 +42,9 @@
         </div>
       </div>
     </div>  
-  </nav> 
-  
-  <body>    
+  </nav>   
+
+<body>    
     <div class = "todo_form container">
       <%= form_for Todo.new, remote: true do |f| %>
         <div class="form-group priority">
@@ -73,5 +72,3 @@
     <p id = "error_message">There are no products containing the term(s) <%= params[:search] %>.</p>
   <%end%>
   </body>
-
-</html>
