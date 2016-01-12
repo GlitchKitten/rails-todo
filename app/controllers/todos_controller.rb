@@ -1,7 +1,7 @@
 class TodosController < ApplicationController
   def index
     if params[:search]
-      @todos = Todo.search(params[:search]).order("created_at DESC")
+      @todos = Todo.search(params[:search]).order(:priority).reverse
     else
       @todos = Todo.order(:priority).reverse
     end

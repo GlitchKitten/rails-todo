@@ -23,12 +23,12 @@
             <span class = "icon-bar"></span>
             <span class = "icon-bar"></span>
           </button>
-
+          
           <div class = "navbar-collapse navbar-header collapse">
-            <div class = "nav navbar-nav">
-              <li><%= link_to "Urgent" %></li>
-              <li><%= link_to "Pending" %></li>
-              <li><%= link_to "Later" %></li>
+            <ul class = "nav navbar-nav">
+              <li><%= link_to "Urgent", todos_path %></li>
+              <li><%= link_to "Pending", todos_path %></li>
+              <li><%= link_to "Later", todos_path %></li>
               <li> 
                 <%= form_tag(todos_path, method: "get", id: "search_form") do %>
                   <%= text_field_tag :search, params[:search] %>
@@ -38,7 +38,7 @@
                 <% end %>
               </li> 
               </br>
-            </div>
+            </ul>
           </div>
         </div>
       </div>
@@ -58,7 +58,9 @@
       
         <div class="form-group">
           <%= f.text_field :description, placeholder: "What needs doing?",  class: "form-control form_area input-text" %>
+          <!--
           <%= f.submit 'Submit', class: "button submit-button" %>
+          -->
         </div>  
       <% end %>
     </div>
